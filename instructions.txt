@@ -1,0 +1,2 @@
+* create_fastapi_project
+run: ./create_fastapi_project.sh ProjectName
