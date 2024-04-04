@@ -10,8 +10,10 @@ mkdir $1
 # Change to the project directory
 cd $1
 
-# Create the subdirectories and an __init__.py file in each one
-for dir in models schemas plugin controller converter;
+
+echo "Creating directories and files..."
+
+for dir in models schemas plugin converter;
 do
   mkdir $dir
   touch $dir/__init__.py
@@ -29,6 +31,10 @@ touch core/setup.py
 mkdir config
 touch config/__init__.py
 touch config/setting.py
+
+mkdir controller
+touch controller/__init__.py
+touch controller/application.py
 
 mkdir cron
 touch cron/__init__.py
@@ -91,5 +97,7 @@ echo "Packages installed."
 
 echo "Creating alembic configuration..."
 alembic init alembic
+
+echo "Project created successfully."
 
 
